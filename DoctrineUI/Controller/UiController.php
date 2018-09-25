@@ -6,7 +6,7 @@
  * Time: 11:03 AM
  */
 
-namespace DoctrineUI\Controller;
+namespace DoctrineUIBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

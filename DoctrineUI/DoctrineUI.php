@@ -4,6 +4,6 @@ namespace DoctrineUI;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class DoctrineUI extends Bundle
+class DoctrineUIBundle extends Bundle
 {
 }

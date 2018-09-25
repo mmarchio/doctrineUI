@@ -1,6 +1,6 @@
 <?php
 
-namespace DoctrineUI\Entity;
+namespace DoctrineUIBundle\Entity;
 
 class BooleanType extends type
 {

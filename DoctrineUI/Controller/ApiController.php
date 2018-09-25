@@ -1,34 +1,34 @@
 <?php
 
-namespace DoctrineUI\Controller;
+namespace DoctrineUIBundle\Controller;
 
-use DoctrineUI\Entity\ObjectType;
-use DoctrineUI\Entity\StringType;
+use DoctrineUIBundle\Entity\ObjectType;
+use DoctrineUIBundle\Entity\StringType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Cache\Simple\FilesystemCache;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use DoctrineUI\Entity\Collector;
+use DoctrineUIBundle\Entity\Collector;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
-use DoctrineUI\Entity\ArrayType;
-use DoctrineUI\Entity\BigIntType;
-use DoctrineUI\Entity\BinaryType;
-use DoctrineUI\Entity\BlobType;
-use DoctrineUI\Entity\BooleanType;
-use DoctrineUI\Entity\DateTimeType;
-use DoctrineUI\Entity\DateTimeTZType;
-use DoctrineUI\Entity\DateType;
-use DoctrineUI\Entity\DecimalType;
-use DoctrineUI\Entity\FloatType;
-use DoctrineUI\Entity\GuidType;
-use DoctrineUI\Entity\IntegerType;
-use DoctrineUI\Entity\JsonArrayType;
-use DoctrineUI\Entity\SimpleArrayType;
-use DoctrineUI\Entity\SmallIntType;
-use DoctrineUI\Entity\TextType;
-use DoctrineUI\Entity\TimeType;
+use DoctrineUIBundle\Entity\ArrayType;
+use DoctrineUIBundle\Entity\BigIntType;
+use DoctrineUIBundle\Entity\BinaryType;
+use DoctrineUIBundle\Entity\BlobType;
+use DoctrineUIBundle\Entity\BooleanType;
+use DoctrineUIBundle\Entity\DateTimeType;
+use DoctrineUIBundle\Entity\DateTimeTZType;
+use DoctrineUIBundle\Entity\DateType;
+use DoctrineUIBundle\Entity\DecimalType;
+use DoctrineUIBundle\Entity\FloatType;
+use DoctrineUIBundle\Entity\GuidType;
+use DoctrineUIBundle\Entity\IntegerType;
+use DoctrineUIBundle\Entity\JsonArrayType;
+use DoctrineUIBundle\Entity\SimpleArrayType;
+use DoctrineUIBundle\Entity\SmallIntType;
+use DoctrineUIBundle\Entity\TextType;
+use DoctrineUIBundle\Entity\TimeType;
 
 class ApiController extends Controller
 {
@@ -54,7 +54,7 @@ class ApiController extends Controller
         if (!empty($request->getContent())) {
             $payload = new \stdClass();
             $payload->tableName = $request->get("table_name");
-            $payload->entityName = "DoctrineUI:".$request->get("table_name");
+            $payload->entityName = "DoctrineUIBundle:".$request->get("table_name");
             $payload->format = $request->get("table_format");
             $payload->fields = [];
             $i = 0;
@@ -102,7 +102,7 @@ class ApiController extends Controller
     {
         $o = new \stdClass();
         $o->tableName = "test";
-        $o->entityName = "DoctrineUI:test";
+        $o->entityName = "DoctrineUIBundle:test";
         $o->format = "annotation";
         $o->fields = [];
         $field = new \stdClass();
