@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Entity;
+namespace DoctrineUI\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * fields
  *
  * @ORM\Table(name="fields")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\fieldsRepository")
+ * @ORM\Entity(repositoryClass="DoctrineUI\Repository\fieldsRepository")
  */
 class fields
 {

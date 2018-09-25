@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Entity;
+namespace DoctrineUI\Entity;
 
 class StringType extends type
 {
