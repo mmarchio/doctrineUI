@@ -1,6 +1,6 @@
 <?php
 
-namespace DoctrineUI;
+namespace DoctrineUIBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

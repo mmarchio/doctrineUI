@@ -71,13 +71,12 @@ class ApiController extends Controller
                 $i++;
             }
             $entity = $this->createEntity($cache, $payload);
-            dump($entity);
             $process = $this->run($this->generateEntityCommand($entity));
             $process = $this->run($this->generateSchemaUpdateCommand());
             $data->msg = $payload->tableName. " successfully created";
         }
 
-        return $this->render('default/tables.html.twig', ["data" => $data]);
+        return $this->render('@DoctrineUIBundle/default/tables.html.twig', ["data" => $data]);
     }
 
     /**
