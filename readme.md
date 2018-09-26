@@ -5,7 +5,7 @@ Provides a simplistic UI and API to generate doctrine entities and tables.
 ****Installation****
 1. add the following line to app/AppKernel.php.
 ```$xslt
-new DoctrineUI\DoctrineUIBundle(),
+new mmarchio\mmarchioDoctrineUIBundle\mmarchioDoctrineUIBundle(),
 
 ```
 
