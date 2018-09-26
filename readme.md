@@ -12,7 +12,10 @@ new mmarchio\mmarchioDoctrineUIBundle\mmarchioDoctrineUIBundle(),
 2. add the following to app/config/routing.yml.
 ```$xslt
 app:
-    resource: '@DoctrineUIBundle/Controller/'
+    resource: '@mmarchioDoctrineUIBundle/Controller/'
+    type: annotation
+
+    resource: '@mmarchioDoctrineUIBundle/Resources/'
     type: annotation
 
 ```
