@@ -35,3 +35,8 @@ twig:
         }    
 
 ```
+
+4. run
+```aidl
+php bin/console asset:install --symlink
+```
