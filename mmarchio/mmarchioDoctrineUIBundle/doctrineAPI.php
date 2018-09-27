@@ -202,9 +202,23 @@ class doctrineAPI
         return $data;
     }
 
+    public function createTableApi($payload, $bundle) {
+        $data = new \stdClass();
+        $cache = new FilesystemCache();
+        $payload->entityName = $bundle.":".$payload->entityName;
+        $entity = $this->createEntity($cache, $payload);
+        dump($entity);
+        $process = $this->run($this->generateEntityCommand($entity));
+        $process = $this->run($this->generateSchemaUpdateCommand());
+        $data->msg = $payload->tableName. " successfully created";
+
+        return json_encode($data);
+    }
+
     protected function createEntity(FilesystemCache $cache, object $payload)
     {
         $e = null;
+        dump($payload);
         if ($this->validatePayload($payload) === true) {
             if (!empty($payload->id) && $cache->has($payload->id)) {
                 $e = json_decode($cache->get($payload->id));
